@@ -66,6 +66,18 @@
     },
     {
       "files": [
+        "css/firefox/new/newsletter/scene2-centered.scss"
+      ],
+      "name": "experiment_firefox_new_scene2_centered"
+    },
+    {
+      "files": [
+        "css/firefox/new/newsletter/scene1-embed.scss"
+      ],
+      "name": "experiment_firefox_new_scene1_embed"
+    },
+    {
+      "files": [
         "css/sandstone/sandstone-resp.less",
         "css/base/notification-banner.less",
         "css/tabzilla/tabzilla-static.less",
@@ -226,6 +238,13 @@
         "css/firefox/new/scene1.scss"
       ],
       "name": "firefox_new_scene1"
+    },
+    {
+      "files": [
+        "css/firefox/home/pre-download-newsletter.scss",
+        "css/firefox/new/newsletter/scene1-pre-download.scss"
+      ],
+      "name": "experiment_firefox_new_scene1_pre_download"
     },
     {
         "files": [
@@ -1149,6 +1168,30 @@
         "js/firefox/new/scene2-email.js"
       ],
       "name": "firefox_new_scene2_email"
+    },
+    {
+      "files": [
+        "js/firefox/new/newsletter/scene2-centered.js"
+      ],
+      "name": "experiment_firefox_new_scene2_centered"
+    },
+    {
+      "files": [
+        "js/firefox/new/newsletter/scene1-pre-download.js"
+      ],
+      "name": "experiment_firefox_new_scene1_pre_download"
+    },
+    {
+      "files": [
+        "js/firefox/new/newsletter/scene1-embed.js"
+      ],
+      "name": "experiment_firefox_new_scene1_embed"
+    },
+    {
+      "files": [
+        "js/firefox/new/newsletter/scene2-pre-download.js"
+      ],
+      "name": "experiment_firefox_new_scene2_pre_download"
     },
     {
       "files": [

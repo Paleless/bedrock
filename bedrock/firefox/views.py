@@ -641,7 +641,7 @@ def download_thanks(request):
     show_newsletter = locale in ['en-US', 'en-GB', 'en-CA', 'en-ZA', 'es-ES', 'es-AR', 'es-CL', 'es-MX', 'pt-BR', 'fr', 'ru', 'id', 'de', 'pl']
 
     # ensure variant matches pre-defined value
-    if variant not in []:  # place expected ?v= values in this list
+    if variant not in ['a', 'b', 'c', 'd', 'e']:  # place expected ?v= values in this list
         variant = None
 
     # check to see if a URL explicitly asks to hide the newsletter
@@ -668,6 +668,11 @@ def download_thanks(request):
             template = 'firefox/new/privacy-dmt/scene2.html'
         elif experience == 'betterbrowser':
             template = 'firefox/campaign/better-browser/scene2.html'
+        elif experience == 'pre-dl':
+            if variant in ['a', 'b', 'c', 'd', 'e']:
+                template = 'firefox/new/newsletter/scene2-{}.html'.format(variant)
+            else:
+                template = 'firefox/new/scene2.html'
         else:
             template = 'firefox/new/scene2.html'
     else:
@@ -730,6 +735,11 @@ def new(request):
             elif experience == 'priv-dmt' and switch('experiment_firefox_new_privacy_dmt'):
                 if variant in ['a', 'b', 'c', 'd', 'e', 'f']:
                     template = 'firefox/new/privacy-dmt/scene1-{}.html'.format(variant)
+                else:
+                    template = 'firefox/new/scene1.html'
+            elif experience == 'pre-dl':
+                if variant in ['a', 'b', 'c', 'd', 'e']:
+                    template = 'firefox/new/newsletter/scene1-{}.html'.format(variant)
                 else:
                     template = 'firefox/new/scene1.html'
             else:
