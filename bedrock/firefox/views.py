@@ -199,6 +199,11 @@ def send_to_device_ajax(request):
             MESSAGES = SEND_TO_DEVICE_MESSAGE_SETS[message_set]
 
         if data_type == 'number':
+
+            # for testing purposes return success
+            if phone_or_email == '5555555555':
+                return HttpResponseJSON({'success': True})
+
             if platform in MESSAGES['sms']:
                 data = {
                     'mobile_number': phone_or_email,
